@@ -14,7 +14,7 @@ Business components (an order's status, a shop's opening hours) live in the app'
 ## Rules for every component
 
 - Styles come only from tokens: no hex, no raw font size, no one-off radius.
-- One `variant` prop for appearance, one `size` prop for scale (`sm` 36, `md` 44, `lg` 52 px tall for controls). No boolean style props that combine badly.
+- One `variant` prop for appearance, one `size` prop for scale. Control heights: web `sm` 32, `md` 40, `lg` 48 px (dense workspaces); mobile `md` 48, `lg` 56 px (touch). No boolean style props that combine badly.
 - States: default, hover (web), pressed, focus-visible (2 px `focusRing`, 2 px offset), disabled, loading, selected, invalid.
 - Accessible name always present; icon-only controls require `label`.
 - Works at 200 % text on web and the largest font size on mobile without clipping.
