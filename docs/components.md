@@ -55,3 +55,30 @@ Back arrow (or close for modal pages) + title in `title3`; optional trailing act
 ## Testing
 
 Each component has: a render test of every variant and state, a keyboard test (web), an accessibility check (name, role, contrast via tokens), a dark-mode snapshot, and a 200 % text check. Showcase pages: web `/design` (public site), mobile `dev-ui` screen.
+
+## Status (v5.0, 2026-11-19)
+
+| Component | Web (`web/src/shared/ui`) | Mobile (`mobile/src/shared/ui`) |
+|---|---|---|
+| Text | `text.tsx` | `text.tsx` (`tone`) |
+| Button | `button.tsx` | `button.tsx` |
+| IconButton | `icon-button.tsx` | `controls.tsx` |
+| TextField | `text-field.tsx` | `input.tsx` (exported as `TextField`) |
+| Checkbox | `checkbox.tsx` | `checkbox.tsx` |
+| Chip | `chip.tsx` | `controls.tsx` |
+| Switch | `switch.tsx` | `controls.tsx` (platform switch) |
+| Badge | `badge.tsx` (tones) | `controls.tsx` |
+| Avatar | `avatar.tsx` | `display.tsx` |
+| ListItem | `list-item.tsx` | `display.tsx` |
+| Price, Rating, QuantityStepper | `commerce.tsx` | `display.tsx` |
+| Spinner | `spinner.tsx` | `display.tsx` |
+| InlineMessage, Banner | `message.tsx` | `message.tsx` |
+| Snackbar | `snackbar.ts` (`showSnackbar`) | `toast.tsx` (`useSnackbar().snackbar`) |
+| ResultPage | `result-page.tsx` | `message.tsx` |
+| EmptyState | `empty-state.tsx` (`action`) | `empty-state.tsx` |
+| PageHeader | workspace header | `page-header.tsx` |
+| Dialog, Sheet, Menu, Popover | `dialog.tsx`, `sheet.tsx`, `dropdown-menu.tsx`, `popover.tsx` | `sheet.tsx` |
+
+Showcases: web Resources › Design › Components (`/resources/design/components/<slug>`), mobile `/dev-ui`. Tests: web `npm test` (Vitest), mobile `npm test` (Jest), both in CI.
+
+Still to build: SegmentedControl and Tabs as kit components (they live in pages today), Dialog on mobile, the Inbox pattern (phase 3), and the commerce patterns ShopCard, ProductCard, CartLine, OrderTimeline, AddressCard, PaymentMethodCard, VoucherCard (phase 4, with the screens that use them).
