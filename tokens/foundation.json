@@ -1,0 +1,40 @@
+{
+  "$description": "Type, space, shape, elevation, motion, layout. One ramp for every platform; sizes in px (web converts to rem).",
+  "font": {
+    "family": "Be Vietnam Pro",
+    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "mono": "ui-monospace, SFMono-Regular, Consolas, monospace",
+    "weights": { "regular": 400, "medium": 500, "semibold": 600, "bold": 700, "extrabold": 800 },
+    "$note": "extrabold only for the wordmark"
+  },
+  "type": {
+    "display": { "size": 40, "lineHeight": 48, "weight": "bold",     "tracking": -0.02, "$use": "landing hero, one per page; web only" },
+    "title1":  { "size": 28, "lineHeight": 36, "weight": "bold",     "tracking": -0.01, "$use": "page title" },
+    "title2":  { "size": 22, "lineHeight": 28, "weight": "semibold", "tracking": 0,     "$use": "section title, shop name on its page" },
+    "title3":  { "size": 18, "lineHeight": 24, "weight": "semibold", "tracking": 0,     "$use": "card title, dialog title, list group" },
+    "body":    { "size": 16, "lineHeight": 24, "weight": "regular",  "tracking": 0,     "$use": "running text, inputs" },
+    "bodySm":  { "size": 14, "lineHeight": 20, "weight": "regular",  "tracking": 0,     "$use": "secondary text, dense lists, tables" },
+    "label":   { "size": 14, "lineHeight": 20, "weight": "semibold", "tracking": 0,     "$use": "buttons, tabs, field labels, chips" },
+    "caption": { "size": 12, "lineHeight": 16, "weight": "medium",   "tracking": 0,     "$use": "timestamps, badges, helper text" }
+  },
+  "space": { "0": 0, "1": 4, "2": 8, "3": 12, "4": 16, "5": 20, "6": 24, "8": 32, "10": 40, "12": 48, "16": 64 },
+  "radius": { "xs": 4, "control": 10, "card": 12, "sheet": 20, "full": 999,
+    "$note": "xs: badges and tiny marks; control: buttons, inputs, chips, tabs, icon buttons; card: cards, images, dialogs, menus; sheet: top corners of a bottom sheet; full: avatars, switches, dots only" },
+  "elevation": {
+    "flat": "none",
+    "overlay": "0 8px 24px rgba(28,26,24,0.12), 0 1px 3px rgba(28,26,24,0.08)",
+    "$note": "content is flat; a card that must stand apart gets a border; only layers above the page (menu, popover, sheet, dialog, snackbar) get the overlay shadow"
+  },
+  "motion": {
+    "fast": 120, "base": 200, "slow": 280,
+    "easeStandard": "cubic-bezier(0.2, 0, 0, 1)", "easeExit": "cubic-bezier(0.4, 0, 1, 1)",
+    "$note": "fast: state changes; base: layers in and out; slow: page transitions. Off when the user asks for reduced motion."
+  },
+  "layout": {
+    "breakpoints": { "md": 600, "lg": 1024, "xl": 1440 },
+    "columns": { "base": 4, "md": 8, "lg": 12 },
+    "gutter": { "base": 16, "md": 24, "lg": 24 },
+    "contentMax": 1200, "readingMax": 680, "touchMin": 44
+  },
+  "icon": { "library": "lucide", "stroke": 1.75, "sizes": { "sm": 16, "md": 20, "lg": 24 } }
+}

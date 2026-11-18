@@ -1,0 +1,16 @@
+{
+  "$description": "Reference palettes. Never used directly by screens: semantic roles in semantic.json point here. Brand: orange (direction A 'Cam Bếp', owner decision 2026-11-19). Neutrals are warm stone, tinted toward the brand.",
+  "orange": {
+    "50": "#FFF4ED", "100": "#FFE4D2", "200": "#FFC5A3", "300": "#FF9E6B", "400": "#FF7A3D",
+    "500": "#F45A16", "600": "#CF430D", "700": "#B33A0C", "800": "#8C2F0F", "900": "#5E200B"
+  },
+  "stone": {
+    "0": "#FFFFFF", "25": "#FCFBFA", "50": "#F7F6F4", "100": "#EFEDEA", "200": "#E3E0DB", "300": "#CFCBC4",
+    "400": "#A8A29A", "500": "#736D65", "600": "#5E5952", "700": "#45413C", "800": "#2E2B28", "850": "#24211E",
+    "900": "#1C1A18", "950": "#171513"
+  },
+  "green": { "50": "#EAF6EE", "100": "#CFEBD8", "300": "#6FD39A", "600": "#1E7B45", "700": "#17633A", "900": "#14301F" },
+  "amber": { "50": "#FFF8E1", "100": "#FFEFC2", "300": "#F2C661", "400": "#F2B630", "600": "#9A6A00", "700": "#7A5200", "900": "#352A0C" },
+  "red": { "50": "#FDECEB", "100": "#FAD3CF", "300": "#FF8F84", "600": "#C8261B", "700": "#A61E15", "900": "#3D1916" },
+  "blue": { "50": "#EDF3FF", "100": "#D6E3FF", "300": "#93B4FF", "600": "#1F5FD1", "700": "#184DAB", "900": "#18243F" }
+}

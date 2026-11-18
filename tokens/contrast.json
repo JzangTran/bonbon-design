@@ -1,0 +1,17 @@
+{
+  "$description": "Foreground/background pairs that must stay readable in both themes, with their WCAG 2.2 minimum: 4.5 for text, 3 for large text and UI parts (1.4.11).",
+  "pairs": [
+    ["text", "background", 4.5], ["text", "surface", 4.5], ["text", "surfaceSubtle", 4.5],
+    ["textSecondary", "background", 4.5], ["textSecondary", "surface", 4.5], ["textSecondary", "surfaceSubtle", 4.5],
+    ["textTertiary", "background", 4.5], ["textTertiary", "surface", 4.5],
+    ["onAccent", "accent", 4.5], ["onAccent", "accentHover", 4.5],
+    ["onAccentSubtle", "accentSubtle", 4.5], ["link", "background", 4.5], ["link", "surface", 4.5],
+    ["accent", "background", 3], ["focusRing", "background", 3], ["borderStrong", "background", 1.5],
+    ["onNeutralAction", "neutralAction", 4.5],
+    ["success", "background", 3], ["onSuccessSubtle", "successSubtle", 4.5],
+    ["warning", "background", 3], ["onWarningSubtle", "warningSubtle", 4.5],
+    ["danger", "background", 4.5], ["onDanger", "danger", 4.5], ["onDangerSubtle", "dangerSubtle", 4.5],
+    ["info", "background", 4.5], ["onInfoSubtle", "infoSubtle", 4.5],
+    ["promo", "promoSubtle", 4.5]
+  ]
+}
