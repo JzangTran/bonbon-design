@@ -51,7 +51,9 @@ css.push('}')
 writeFileSync(join(dist, 'tokens.css'), css.join('\n') + '\n')
 
 // ---------- mobile: TypeScript module ----------
-const fontKey = { regular: '400Regular', medium: '500Medium', semibold: '600SemiBold', bold: '700Bold', extrabold: '800ExtraBold' }
+const fileByWeight = { 400: '400Regular', 500: '500Medium', 600: '600SemiBold', 700: '700Bold', 800: '800ExtraBold' }
+// the file follows the weight a name resolves to, so bold and extrabold load the semibold file (never bold, owner 2026-11-19)
+const fontKey = Object.fromEntries(Object.entries(font.weights).filter(([k]) => !k.startsWith('$')).map(([k, w]) => [k, fileByWeight[w]]))
 const familyId = font.family.replace(/\s+/g, '')
 const ts = []
 ts.push(header('//'))
@@ -60,7 +62,7 @@ ts.push(`const light = ${JSON.stringify(themes.light, null, 2)} as const\n`)
 ts.push('export type ColorScheme = { [K in keyof typeof light]: string }\n')
 ts.push(`const dark: ColorScheme = ${JSON.stringify(themes.dark, null, 2)}\n`)
 ts.push('export const colors = { light: light as ColorScheme, dark }\n')
-ts.push(`/** ${font.family}: load these with @expo-google-fonts/be-vietnam-pro; extrabold is for the wordmark only. */`)
+ts.push(`/** ${font.family}: load these with @expo-google-fonts/be-vietnam-pro; every weight name resolves to at most semibold. */`)
 ts.push(`export const fonts = ${JSON.stringify(Object.fromEntries(Object.keys(clean(font.weights)).map((k) => [k, `${familyId}_${fontKey[k]}`])), null, 2)} as const\n`)
 const typeTs = Object.fromEntries(
   Object.entries(clean(type)).map(([k, t]) => [k, { fontSize: t.size, lineHeight: t.lineHeight, fontFamily: `${familyId}_${fontKey[t.weight]}`, letterSpacing: +(t.tracking * t.size).toFixed(2) }]),
@@ -73,9 +75,8 @@ ts.push(`export const radius = ${JSON.stringify(clean(radius), null, 2)} as cons
 ts.push(`export const motion = ${JSON.stringify(Object.fromEntries(Object.entries(clean(motion)).filter(([, v]) => typeof v === 'number')), null, 2)} as const\n`)
 ts.push(`export const layout = ${JSON.stringify(layout, null, 2)} as const\n`)
 ts.push(`export const icon = ${JSON.stringify(icon, null, 2)} as const\n`)
-ts.push('/** Fluent shadows on React Native (iOS shadow + Android elevation): card = shadow4 for content on the canvas, raised = shadow8, overlay = shadow16 for menus, sheets and snackbars. */')
+ts.push('/** Fluent shadows on React Native (iOS shadow + Android elevation), for layers above the page only: raised = shadow8, overlay = shadow16 for menus, sheets and snackbars. Cards never cast a shadow. */')
 ts.push('export const shadows = {')
-ts.push('  card: { shadowColor: "#000000", shadowOpacity: 0.14, shadowRadius: 4, shadowOffset: { width: 0, height: 2 }, elevation: 2 },')
 ts.push('  raised: { shadowColor: "#000000", shadowOpacity: 0.14, shadowRadius: 8, shadowOffset: { width: 0, height: 4 }, elevation: 4 },')
 ts.push('  overlay: { shadowColor: "#000000", shadowOpacity: 0.14, shadowRadius: 16, shadowOffset: { width: 0, height: 8 }, elevation: 8 },')
 ts.push('} as const')

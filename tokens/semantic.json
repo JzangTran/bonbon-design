@@ -1,13 +1,15 @@
 {
-  "$description": "Semantic colour roles (design v6, after the Fluent 2 alias tokens): what a colour is for, in light and dark. Neutral first: the canvas is a light grey and content sits on white surfaces lifted by a shadow, so groups read without lines. The blue signal marks only the primary action, links, the selected item and focus; status colours only report status; orange is the brand and promo labels. Pairs that must stay readable are in contrast.json and checked by the tests.",
-  "background":       { "light": "{grey.96}", "dark": "{grey.8}",   "$description": "the canvas (Fluent colorNeutralBackground3): pages, app frame" },
-  "surface":          { "light": "{grey.0}",  "dark": "{grey.16}",  "$description": "cards, sheets, panels, list rows on the canvas (colorNeutralBackground1)" },
+  "$description": "Semantic colour roles (design v6.1, after the Fluent 2 alias tokens and the Microsoft Teams layout): what a colour is for, in light and dark. Neutral first, in three layers with gentle steps between them: the content is white, supporting panes (side navigation, lists) a light grey, the global frame (top bar, app rail) a slightly darker grey. Blocks are made with thin light borders and space, never shadows (shadows only for layers above the page). Never pure black: text is a dark grey. The blue signal marks only the primary action, links, the selected item and focus; status colours only report status; orange is the brand and promo labels. Pairs that must stay readable are in contrast.json and checked by the tests.",
+  "background":       { "light": "{grey.0}",  "dark": "{grey.12}",  "$description": "the content: pages and screens are white (colorNeutralBackground1)" },
+  "pane":             { "light": "{grey.96}", "dark": "{grey.8}",  "$description": "a supporting pane next to the content: side navigation, list pane, filters (colorNeutralBackground3)" },
+  "frame":            { "light": "{grey.92}", "dark": "#0A0A0A",   "$description": "the global frame around everything: top bar, app rail (colorNeutralBackground5)" },
+  "surface":          { "light": "{grey.0}",  "dark": "{grey.16}",  "$description": "cards, sheets, dialogs: white, set apart by a border or by space (colorNeutralBackground1)" },
   "surfaceSubtle":    { "light": "{grey.98}", "dark": "{grey.12}",  "$description": "a quiet fill inside a surface: search field, hovered row (colorNeutralBackground2)" },
   "surfaceStrong":    { "light": "{grey.94}", "dark": "{grey.20}",  "$description": "pressed fill, skeleton, progress track (colorNeutralBackground4)" },
   "imageSlot":        { "light": "{grey.94}", "dark": "{grey.20}",  "$description": "an image that has not loaded or does not exist" },
   "overlay":          { "light": "rgba(0,0,0,0.4)", "dark": "rgba(0,0,0,0.5)", "$description": "scrim behind dialogs and sheets" },
 
-  "border":           { "light": "{grey.88}", "dark": "{grey.32}",  "$description": "a hairline where a shadow cannot be used (tables, split panes) (colorNeutralStroke2)" },
+  "border":           { "light": "{grey.88}", "dark": "{grey.32}",  "$description": "the outline of a card, a table, a split between panes (colorNeutralStroke2)" },
   "borderStrong":     { "light": "{grey.82}", "dark": "#666666",    "$description": "outline of an input, checkbox, secondary button (colorNeutralStroke1)" },
   "divider":          { "light": "{grey.94}", "dark": "#3D3D3D",    "$description": "between rows inside a card (colorNeutralStroke3)" },
 

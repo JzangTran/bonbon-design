@@ -4,18 +4,18 @@
     "family": "Be Vietnam Pro",
     "fallback": "'Segoe UI Variable', 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif",
     "mono": "ui-monospace, SFMono-Regular, Consolas, monospace",
-    "weights": { "regular": 400, "medium": 500, "semibold": 600, "bold": 700, "extrabold": 800 },
-    "$note": "Fluent 2 uses regular and semibold; bold only for the wordmark-sized display, extrabold for the wordmark"
+    "weights": { "regular": 400, "medium": 500, "semibold": 600, "bold": 600, "extrabold": 600 },
+    "$note": "Owner rule 2026-11-19: never bold. Semibold (600) is the heaviest weight anywhere; the names bold and extrabold stay only so older code keeps working, and resolve to semibold."
   },
   "type": {
     "display": { "size": 40, "lineHeight": 52, "weight": "semibold", "tracking": 0, "$use": "Fluent Large Title: landing hero, one per page" },
     "title1":  { "size": 28, "lineHeight": 36, "weight": "semibold", "tracking": 0, "$use": "Fluent Title 2: page title" },
     "title2":  { "size": 20, "lineHeight": 28, "weight": "semibold", "tracking": 0, "$use": "Fluent Subtitle 1: section title" },
     "title3":  { "size": 16, "lineHeight": 22, "weight": "semibold", "tracking": 0, "$use": "Fluent Subtitle 2: card title, dialog title, list group" },
-    "body":    { "size": 16, "lineHeight": 22, "weight": "regular",  "tracking": 0, "$use": "running text on phones, long reading on the web" },
-    "bodySm":  { "size": 14, "lineHeight": 20, "weight": "regular",  "tracking": 0, "$use": "Fluent Body 1: the default text of web pages, dense lists, tables" },
-    "label":   { "size": 14, "lineHeight": 20, "weight": "semibold", "tracking": 0, "$use": "Fluent Body 1 Strong: buttons, tabs, field labels" },
-    "caption": { "size": 12, "lineHeight": 16, "weight": "regular",  "tracking": 0, "$use": "Fluent Caption 1: timestamps, badges, help text" }
+    "body":    { "size": 16, "lineHeight": 22, "weight": "regular",  "tracking": 0.01, "$use": "running text on phones, long reading on the web" },
+    "bodySm":  { "size": 14, "lineHeight": 20, "weight": "regular",  "tracking": 0.01, "$use": "Fluent Body 1: the default text of web pages, dense lists, tables" },
+    "label":   { "size": 14, "lineHeight": 20, "weight": "semibold", "tracking": 0.01, "$use": "Fluent Body 1 Strong: buttons, tabs, field labels" },
+    "caption": { "size": 12, "lineHeight": 16, "weight": "regular",  "tracking": 0.01, "$use": "Fluent Caption 1: timestamps, badges, help text" }
   },
   "space": { "0": 0, "1": 4, "2": 8, "3": 12, "4": 16, "5": 20, "6": 24, "8": 32, "10": 40, "12": 48, "16": 64 },
   "radius": { "xs": 2, "control": 4, "card": 8, "sheet": 12, "full": 999,
@@ -23,12 +23,12 @@
   "elevation": {
     "flat": "none",
     "shadow2": "0 0 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14)",
-    "card": "0 0 2px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.14)",
+    "card": "none",
     "raised": "0 0 2px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.14)",
     "overlay": "0 0 2px rgba(0,0,0,0.12), 0 8px 16px rgba(0,0,0,0.14)",
     "sheet": "0 0 8px rgba(0,0,0,0.12), 0 14px 28px rgba(0,0,0,0.14)",
     "dialog": "0 0 8px rgba(0,0,0,0.12), 0 32px 64px rgba(0,0,0,0.14)",
-    "$note": "Fluent shadow2/4/8/16/28/64: card = shadow4 (content on the canvas, instead of a border), raised = shadow8 (hover, sticky bars), overlay = shadow16 (menus, popovers, snackbars), sheet = shadow28, dialog = shadow64"
+    "$note": "Fluent shadow2/8/16/28/64. Content never casts a shadow: cards are flat, set apart by a thin light border and space (card = none). raised = shadow8 (a dragged item, a sticky bar over scrolled content), overlay = shadow16 (menus, popovers, snackbars), sheet = shadow28, dialog = shadow64"
   },
   "motion": {
     "fast": 150, "base": 200, "slow": 300,
