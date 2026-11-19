@@ -1,6 +1,6 @@
 {
   "name": "@bonbon/design",
-  "version": "6.0.0",
+  "version": "6.1.0",
   "private": true,
   "description": "bonbon design system: source tokens and the generators for web (CSS) and mobile (React Native TS).",
   "type": "module",
