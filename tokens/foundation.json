@@ -1,40 +1,47 @@
 {
-  "$description": "Type, space, shape, elevation, motion, layout. One ramp for every platform; sizes in px (web converts to rem).",
+  "$description": "Type, space, shape, elevation, motion, layout (design v6, Fluent 2 values from @fluentui/tokens). One ramp for every platform; sizes in px (web converts to rem).",
   "font": {
     "family": "Be Vietnam Pro",
-    "fallback": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "fallback": "'Segoe UI Variable', 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif",
     "mono": "ui-monospace, SFMono-Regular, Consolas, monospace",
     "weights": { "regular": 400, "medium": 500, "semibold": 600, "bold": 700, "extrabold": 800 },
-    "$note": "extrabold only for the wordmark"
+    "$note": "Fluent 2 uses regular and semibold; bold only for the wordmark-sized display, extrabold for the wordmark"
   },
   "type": {
-    "display": { "size": 40, "lineHeight": 48, "weight": "bold",     "tracking": -0.02, "$use": "landing hero, one per page; web only" },
-    "title1":  { "size": 28, "lineHeight": 36, "weight": "bold",     "tracking": -0.01, "$use": "page title" },
-    "title2":  { "size": 22, "lineHeight": 28, "weight": "semibold", "tracking": 0,     "$use": "section title, shop name on its page" },
-    "title3":  { "size": 18, "lineHeight": 24, "weight": "semibold", "tracking": 0,     "$use": "card title, dialog title, list group" },
-    "body":    { "size": 16, "lineHeight": 24, "weight": "regular",  "tracking": 0,     "$use": "running text, inputs" },
-    "bodySm":  { "size": 14, "lineHeight": 20, "weight": "regular",  "tracking": 0,     "$use": "secondary text, dense lists, tables" },
-    "label":   { "size": 14, "lineHeight": 20, "weight": "semibold", "tracking": 0,     "$use": "buttons, tabs, field labels, chips" },
-    "caption": { "size": 12, "lineHeight": 16, "weight": "medium",   "tracking": 0,     "$use": "timestamps, badges, helper text" }
+    "display": { "size": 40, "lineHeight": 52, "weight": "semibold", "tracking": 0, "$use": "Fluent Large Title: landing hero, one per page" },
+    "title1":  { "size": 28, "lineHeight": 36, "weight": "semibold", "tracking": 0, "$use": "Fluent Title 2: page title" },
+    "title2":  { "size": 20, "lineHeight": 28, "weight": "semibold", "tracking": 0, "$use": "Fluent Subtitle 1: section title" },
+    "title3":  { "size": 16, "lineHeight": 22, "weight": "semibold", "tracking": 0, "$use": "Fluent Subtitle 2: card title, dialog title, list group" },
+    "body":    { "size": 16, "lineHeight": 22, "weight": "regular",  "tracking": 0, "$use": "running text on phones, long reading on the web" },
+    "bodySm":  { "size": 14, "lineHeight": 20, "weight": "regular",  "tracking": 0, "$use": "Fluent Body 1: the default text of web pages, dense lists, tables" },
+    "label":   { "size": 14, "lineHeight": 20, "weight": "semibold", "tracking": 0, "$use": "Fluent Body 1 Strong: buttons, tabs, field labels" },
+    "caption": { "size": 12, "lineHeight": 16, "weight": "regular",  "tracking": 0, "$use": "Fluent Caption 1: timestamps, badges, help text" }
   },
   "space": { "0": 0, "1": 4, "2": 8, "3": 12, "4": 16, "5": 20, "6": 24, "8": 32, "10": 40, "12": 48, "16": 64 },
-  "radius": { "xs": 4, "control": 10, "card": 12, "sheet": 20, "full": 999,
-    "$note": "xs: badges and tiny marks; control: buttons, inputs, chips, tabs, icon buttons; card: cards, images, dialogs, menus; sheet: top corners of a bottom sheet; full: avatars, switches, dots only" },
+  "radius": { "xs": 2, "control": 4, "card": 8, "sheet": 12, "full": 999,
+    "$note": "Fluent: xs (Small) badges and tags; control (Medium) buttons, inputs, chips, tabs, list rows; card (X-Large 8) cards, dialogs, menus, popovers, images; sheet 12 the top of a bottom sheet; full avatars, switches, dots only" },
   "elevation": {
     "flat": "none",
-    "overlay": "0 8px 24px rgba(28,26,24,0.12), 0 1px 3px rgba(28,26,24,0.08)",
-    "$note": "content is flat; a card that must stand apart gets a border; only layers above the page (menu, popover, sheet, dialog, snackbar) get the overlay shadow"
+    "shadow2": "0 0 2px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14)",
+    "card": "0 0 2px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.14)",
+    "raised": "0 0 2px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.14)",
+    "overlay": "0 0 2px rgba(0,0,0,0.12), 0 8px 16px rgba(0,0,0,0.14)",
+    "sheet": "0 0 8px rgba(0,0,0,0.12), 0 14px 28px rgba(0,0,0,0.14)",
+    "dialog": "0 0 8px rgba(0,0,0,0.12), 0 32px 64px rgba(0,0,0,0.14)",
+    "$note": "Fluent shadow2/4/8/16/28/64: card = shadow4 (content on the canvas, instead of a border), raised = shadow8 (hover, sticky bars), overlay = shadow16 (menus, popovers, snackbars), sheet = shadow28, dialog = shadow64"
   },
   "motion": {
-    "fast": 120, "base": 200, "slow": 280,
-    "easeStandard": "cubic-bezier(0.2, 0, 0, 1)", "easeExit": "cubic-bezier(0.4, 0, 1, 1)",
-    "$note": "fast: state changes; base: layers in and out; slow: page transitions. Off when the user asks for reduced motion."
+    "fast": 150, "base": 200, "slow": 300,
+    "easeStandard": "cubic-bezier(0.33, 0, 0.67, 1)", "easeExit": "cubic-bezier(0.9, 0.1, 1, 0.2)", "easeEnter": "cubic-bezier(0.1, 0.9, 0.2, 1)",
+    "$note": "Fluent durationFast/Normal/Slow and curveEasyEase / AccelerateMax / DecelerateMax. Off when the user asks for reduced motion."
   },
   "layout": {
-    "breakpoints": { "md": 600, "lg": 1024, "xl": 1440 },
+    "breakpoints": { "md": 640, "lg": 1024, "xl": 1366 },
     "columns": { "base": 4, "md": 8, "lg": 12 },
-    "gutter": { "base": 16, "md": 24, "lg": 24 },
+    "gutter": { "base": 16, "md": 16, "lg": 24 },
+    "pagePadding": { "base": 16, "lg": 24 },
+    "cardPadding": 16, "cardGap": 12, "sectionGap": 24,
     "contentMax": 1200, "readingMax": 680, "touchMin": 44
   },
-  "icon": { "library": "lucide", "stroke": 1.75, "sizes": { "sm": 16, "md": 20, "lg": 24 } }
+  "icon": { "library": "lucide", "stroke": 1.5, "sizes": { "sm": 16, "md": 20, "lg": 24 } }
 }

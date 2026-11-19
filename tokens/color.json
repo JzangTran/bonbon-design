@@ -1,16 +1,21 @@
 {
-  "$description": "Reference palettes. Never used directly by screens: semantic roles in semantic.json point here. Brand: orange (direction A 'Cam Bếp', owner decision 2026-11-19). Neutrals are warm stone, tinted toward the brand.",
+  "$description": "Reference palettes (design v6, owner decision 2026-11-20: Fluent 2). Never used directly by screens: semantic roles in semantic.json point here. Values from @fluentui/tokens: grey (neutrals), brandWeb (the signal blue) and the status colours. Orange is bonbon's own brand colour, kept only for the logo, the mascot and promo labels.",
+  "grey": {
+    "0": "#FFFFFF", "8": "#141414", "12": "#1F1F1F", "14": "#242424", "16": "#292929", "20": "#333333", "26": "#424242",
+    "32": "#525252", "38": "#616161", "44": "#707070", "52": "#858585", "62": "#9E9E9E", "74": "#BDBDBD", "82": "#D1D1D1",
+    "88": "#E0E0E0", "90": "#E6E6E6", "92": "#EBEBEB", "94": "#F0F0F0", "96": "#F5F5F5", "98": "#FAFAFA"
+  },
+  "blue": {
+    "10": "#061724", "20": "#082338", "30": "#0A2E4A", "40": "#0C3B5E", "50": "#0E4775", "60": "#0F548C", "70": "#115EA3",
+    "80": "#0F6CBD", "90": "#2886DE", "100": "#479EF5", "110": "#62ABF5", "120": "#77B7F7", "130": "#96C6FA", "140": "#B4D6FA",
+    "150": "#CFE4FA", "160": "#EBF3FC"
+  },
   "orange": {
     "50": "#FFF4ED", "100": "#FFE4D2", "200": "#FFC5A3", "300": "#FF9E6B", "400": "#FF7A3D",
     "500": "#F45A16", "600": "#CF430D", "700": "#B33A0C", "800": "#8C2F0F", "900": "#5E200B"
   },
-  "stone": {
-    "0": "#FFFFFF", "25": "#FCFBFA", "50": "#F7F6F4", "100": "#EFEDEA", "200": "#E3E0DB", "300": "#CFCBC4",
-    "400": "#A8A29A", "500": "#736D65", "600": "#5E5952", "700": "#45413C", "800": "#2E2B28", "850": "#24211E",
-    "900": "#1C1A18", "950": "#171513"
-  },
-  "green": { "50": "#EAF6EE", "100": "#CFEBD8", "300": "#6FD39A", "600": "#1E7B45", "700": "#17633A", "900": "#14301F" },
-  "amber": { "50": "#FFF8E1", "100": "#FFEFC2", "300": "#F2C661", "400": "#F2B630", "600": "#9A6A00", "700": "#7A5200", "900": "#352A0C" },
-  "red": { "50": "#FDECEB", "100": "#FAD3CF", "300": "#FF8F84", "600": "#C8261B", "700": "#A61E15", "900": "#3D1916" },
-  "blue": { "50": "#EDF3FF", "100": "#D6E3FF", "300": "#93B4FF", "600": "#1F5FD1", "700": "#184DAB", "900": "#18243F" }
+  "green": { "10": "#F1FAF1", "60": "#107C10", "70": "#0E700E", "dark": "#54B054", "darkBg": "#052505" },
+  "red": { "10": "#FDF3F4", "60": "#C50F1F", "70": "#B10E1C", "dark": "#DC626D", "darkBg": "#3B0509" },
+  "darkOrange": { "10": "#FFF9F5", "60": "#BC4B09", "70": "#8A3707", "dark": "#FAA06B", "darkBg": "#411200" },
+  "amber": { "400": "#F2B630" }
 }
