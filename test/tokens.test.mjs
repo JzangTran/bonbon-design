@@ -26,12 +26,12 @@ for (const theme of ['light', 'dark']) {
   }
 }
 
-test('type ramp: eight styles, sizes and line heights on the 2px/4px grid, line height ≥ 1.2× size', () => {
+test('type ramp: eight styles, sizes and line heights on the 2px grid (Fluent uses 22, 52), line height ≥ 1.2× size', () => {
   const styles = Object.entries(foundation.type).filter(([k]) => !k.startsWith('$'))
   assert.equal(styles.length, 8)
   for (const [name, t] of styles) {
     assert.equal(t.size % 2, 0, `${name} size`)
-    assert.equal(t.lineHeight % 4, 0, `${name} line height`)
+    assert.equal(t.lineHeight % 2, 0, `${name} line height`)
     assert.ok(t.lineHeight >= t.size * 1.2, `${name} line height too tight`)
     assert.ok(foundation.font.weights[t.weight], `${name} weight`)
   }
